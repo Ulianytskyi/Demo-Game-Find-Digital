@@ -1,0 +1,28 @@
+.container {
+    width: 333px;
+    height: 343px;
+    background-color: grey;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#board{
+    display: flex;
+    flex-wrap: wrap;;
+    width: 333px;
+}
+
+.tile {
+    font-size: 30px;
+    width: 33px;
+    display: flex;
+    justify-content: center;
+    background-color: azure;
+    border-radius: 10px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.checked {
+    background-color: salmon;
+}
