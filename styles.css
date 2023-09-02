@@ -26,3 +26,13 @@
 .checked {
     background-color: salmon;
 }
+
+.red {
+    background-color: red;
+    color: red;
+}
+
+.blue {
+    background-color: blue;
+    color: blue;
+}
