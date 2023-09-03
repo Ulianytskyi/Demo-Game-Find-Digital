@@ -42,3 +42,17 @@
     color: blue;
     cursor: auto;
 }
+
+.number {
+    font-size: 30px;
+    width: 33px;
+    display: flex;
+    justify-content: center;
+    background-color: azure;
+    border-radius: 10px;
+    margin: 2px;
+}
+
+.hide {
+    display: none;
+}

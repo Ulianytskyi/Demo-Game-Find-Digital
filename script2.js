@@ -59,7 +59,6 @@ function handleMouseDown() {
       for (let k = 1; k < tilesArray.length; k++) {
           sumArray += parseInt(tilesArray[k].textContent);
       }
-      
       if (tilesArray[0].textContent <= tilesArray[1].textContent ||
           tilesArray[0].textContent < sumArray) {
         // console.log("LOSE");
@@ -99,7 +98,7 @@ function checkWinLose(index) {
 function addListeners() {
   arrayMain.forEach(element => {
     for (let i = 0; i < element.length; i++) {
-      if (element[i].textContent != '0') {
+      if (element[i].id != 'found') {
         element[i].addEventListener("mousedown", handleMouseDown);
       }
     }
@@ -109,7 +108,7 @@ function addListeners() {
 function removeListeners() {
   arrayMain.forEach(element => {
     for (let i = 0; i < element.length; i++) {
-      if (element[i].textContent != '0') {
+      if (element[i].id != 'found') {
         element[i].removeEventListener("mousedown", handleMouseDown);
       }
     }
@@ -141,32 +140,22 @@ function moveDown() {
   let emptyCellsFound = true;
 
   while (emptyCellsFound) {
-
-    
+    emptyCellsFound = false;
     for (let col = 0; col < arrayMain[0].length; col++) {
       for (let row = arrayMain.length - 1; row > 0; row--) {
-        
         if (arrayMain[row][col].textContent == "0") {
-          
           arrayMain[row][col].textContent = arrayMain[row - 1][col].textContent;
-          
           arrayMain[row - 1][col].textContent = "0";
-          
-          
+          emptyCellsFound = true;
         }
-        emptyCellsFound = false;
-        
       }
     }
-    
-    // emptyCellsFound = false;
   }
 }
 
 
 document.getElementById('btn').addEventListener('click', ()=> {
   moveDown();
-
 });
 
 
