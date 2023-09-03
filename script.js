@@ -44,24 +44,25 @@ function handleMouseDown() {
   
   tilesArray.push(currTile);
   currTile.classList.add("checked");
-  
-  console.log(tilesArray.map((item) => item.textContent));
+    
+  // console.log(tilesArray.map((item) => item.textContent));
   removeListeners();
 
   if (tilesArray.length > 1) {
     count++;
+    tilesArray[count].removeEventListener("mousedown", handleMouseDown);
     let sumArray = 0;
     for (let k = 1; k < tilesArray.length; k++) {
         sumArray += parseInt(tilesArray[k].textContent);
     }
     if (tilesArray[0].textContent <= tilesArray[1].textContent ||
         tilesArray[0].textContent < sumArray) {
-      console.log("LOSE");
+      // console.log("LOSE");
       score -= parseInt(tilesArray[0].textContent);
       addListeners();
       checkWinLose (0);
     } else if (tilesArray[0].textContent == sumArray) {
-      console.log("win");
+      // console.log("win");
       score += parseInt(tilesArray[0].textContent);
       addListeners();
       checkWinLose (1);
