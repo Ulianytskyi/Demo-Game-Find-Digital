@@ -23,16 +23,22 @@
     cursor: pointer;
 }
 
+.cursor {
+    cursor: auto;
+}
+
 .checked {
     background-color: salmon;
 }
 
 .red {
-    background-color: red;
+    /* background-color: red; */
     color: red;
+    cursor: auto;
 }
 
 .blue {
     background-color: blue;
     color: blue;
+    cursor: auto;
 }
