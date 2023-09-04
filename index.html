@@ -10,14 +10,23 @@
 </head>
 <h2>
 
-    <h2>Find Addends</h2>
+    <h2 style="text-align: center;">Find Addends</h2>
 
-    <div class="container">
+    <div class="info hide">
+        <div class="score-and-timer">
+            <h2><div id="score-log">Score: 0</div></h2>
+            <h2><div id="timer">Time: 99</div></h2>
+        </div>
+    </div>
+
+    <div class="container hide">
         <div id="board"></div>
     </div>
 
-    <h2><div id="log">Score: 0</div></h2>
-    <button id="btn">Slide Down</button>
+    <div class="screen-cover">
+        <div id="score-final" class="hide">Final Score: 0</div>
+        <button id="btn">Start Game</button>
+    </div>
 
     <script src="script.js"></script>
     

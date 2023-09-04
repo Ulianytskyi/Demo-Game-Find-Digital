@@ -4,6 +4,20 @@
     background-color: grey;
     padding: 10px;
     border-radius: 10px;
+    margin: 0 auto;
+}
+
+.screen-cover {
+    width: 333px;
+    height: 343px;
+    background-color: rgb(243, 241, 241);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 #board{
@@ -32,7 +46,7 @@
 }
 
 .red {
-    /* background-color: red; */
+    background-color: red;
     color: red;
     cursor: auto;
 }
@@ -55,4 +69,29 @@
 
 .hide {
     display: none;
+}
+
+.info {
+    margin: 0 auto;
+    width: 350px;
+}
+
+.score-and-timer {
+    display: flex;
+    justify-content: space-between;
+}
+
+#score-final {
+    position: absolute;
+    top: 130px;
+    font-size: 30px;
+    padding: 20px;
+}
+
+#btn {
+    width: 250px;
+    height: 75px;
+    font-size: 25px;
+    border-radius: 20px;
+
 }
