@@ -6,6 +6,7 @@ const board = document.getElementById('board');
 const scoreLog = document.getElementById('score-log');
 const timer = document.getElementById('timer');
 const button = document.getElementById('btn');
+const pauseBtn = document.getElementById('pause-btn');
 const scoreFinal = document.getElementById('score-final');
 
 let arrayMain = [];
@@ -203,7 +204,9 @@ function fillNewDigitals(){
 
 let sec = 99;
 let timeTick = 1000;
-let myTimer = setInterval (() => {
+let myTimer;
+
+function updateTimer() {
   timer.innerHTML = `Time: ${sec--}`;
   if (sec < 0) {
     clearInterval(myTimer);
@@ -224,7 +227,25 @@ let myTimer = setInterval (() => {
       }
     });
   }
-}, timeTick);
+}
+
+myTimer = setInterval(updateTimer, timeTick);
+
+let timePause = false;
+pauseBtn.addEventListener('click', () => {
+  if (timePause) {
+    pauseBtn.textContent = `⏸`;
+    myTimer = setInterval(updateTimer, timeTick);
+    timePause = false;
+    timer.style.color = 'black';
+  } else {
+    pauseBtn.textContent = `▶️`;
+    clearInterval(myTimer);
+    timePause = true;
+    timer.style.color = 'grey';
+  }
+});
+
 
 // buttons and info -----------------
 
