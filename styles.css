@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
+
+body {
+    font-family: 'ADLaM Display', cursive;
+    
+}
+
 .container {
     width: 333px;
     height: 343px;
@@ -10,7 +17,7 @@
 .screen-cover {
     width: 333px;
     height: 343px;
-    background-color: rgb(243, 241, 241);
+    /* background-color: rgb(243, 241, 241); */
     padding: 10px;
     border-radius: 10px;
     margin: 0 auto;
@@ -27,7 +34,7 @@
 }
 
 .tile {
-    font-size: 30px;
+    font-size: 26px;
     width: 33px;
     display: flex;
     justify-content: center;
@@ -42,18 +49,24 @@
 }
 
 .checked {
-    background-color: salmon;
+    background-image: url('./bord_.gif');
+    background-size: 33px 33px;
+    background-color: rgb(158, 252, 155);
 }
 
 .red {
-    background-color: red;
-    color: red;
+    /* background-color: red; */
+    color: rgba(255, 240, 240, 0);
+    background-image: url('./skull_red.gif');
+    background-size: 33px 33px;
     cursor: auto;
 }
 
 .blue {
-    background-color: blue;
-    color: blue;
+    /* background-color: blue; */
+    color: rgba(0, 0, 255, 0);
+    background-image: url('./flowers.gif');
+    background-size: 33px 33px;
     cursor: auto;
 }
 
@@ -100,4 +113,11 @@
     border: none;
     background-color: #fff;
     font-size: 20px;
+}
+
+.bord {
+    position: absolute;
+    top: 182px;
+    left: 72px;
+    width: 38px;
 }

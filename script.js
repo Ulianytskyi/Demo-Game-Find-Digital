@@ -182,22 +182,21 @@ function moveDown() {
 
 function fillNewDigitals(){
   const redStyle = 'red';
-   const blueStyle = 'blue';
-   arrayMain.forEach(element => {
-       for (let i = 0; i < element.length; i++) {
-           const tile = element[i];
-           if (tile.textContent === '0') {
-               tile.textContent = getRandomNumber();
-               tile.classList.remove('cursor');
-               
-           }
-           if (tile.classList.contains(redStyle)) {
-            tile.classList.remove(redStyle);
-        } else if (tile.classList.contains(blueStyle)) {
-            tile.classList.remove(blueStyle);
-        }
-       }
-   });
+  const blueStyle = 'blue';
+  arrayMain.forEach(element => {
+    for (let i = 0; i < element.length; i++) {
+      const tile = element[i];
+      if (tile.textContent === '0') {
+        tile.textContent = getRandomNumber();
+        tile.classList.remove('cursor');
+      }
+      if (tile.classList.contains(redStyle)) {
+        tile.classList.remove(redStyle);
+      } else if (tile.classList.contains(blueStyle)) {
+        tile.classList.remove(blueStyle);
+      }
+    }
+  });
 }
 
 // timer ------------------------------
